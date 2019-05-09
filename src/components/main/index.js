@@ -2,7 +2,6 @@ import React from 'react'
 import * as S from './styles'
 
 // mock
-
 const data = [
   {
     id: '1',
@@ -33,27 +32,31 @@ const data = [
 const Main = () => (
   <main>
     <header>BOOKFAVE - Challenge</header>
-    <section>
+    <S.Box>
       <div className="form">Add items</div>
       <div className="list">
         {data.map(item => (
-          <div className="item">
-            <div className="content">
-              <div className="title">{item.title}</div>
-              <div className="link">{item.link}</div>
-              {item.tags.map(tag => (
-                <S.Tag>
-                  {tag} <S.CloseTag>&#10005;</S.CloseTag>
-                </S.Tag>
-              ))}
-            </div>
+          <S.Item>
+            <S.ItemContent>
+              <S.Title>{item.title}</S.Title>
+              <S.Link href={item.link} target="_blank">
+                {item.link}
+              </S.Link>
+              <div>
+                {item.tags.map(tag => (
+                  <S.Tag>
+                    {tag} <S.CloseTag>&#10005;</S.CloseTag>
+                  </S.Tag>
+                ))}
+              </div>
+            </S.ItemContent>
             <div className="actions">
               <button>Delete</button>
             </div>
-          </div>
+          </S.Item>
         ))}
       </div>
-    </section>
+    </S.Box>
   </main>
 )
 
