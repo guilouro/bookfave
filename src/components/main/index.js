@@ -42,7 +42,9 @@ const Main = () => (
               <div className="title">{item.title}</div>
               <div className="link">{item.link}</div>
               {item.tags.map(tag => (
-                <S.Tag>{tag}</S.Tag>
+                <S.Tag>
+                  {tag} <S.CloseTag>&#10005;</S.CloseTag>
+                </S.Tag>
               ))}
             </div>
             <div className="actions">
