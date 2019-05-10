@@ -18,6 +18,7 @@ const Form = () => {
           <Icon name="Search" onClick={() => handleClick('search')} />
         </S.Button>
       </S.Menu>
+
       {currentType === 'new' && (
         <S.Fields>
           <S.Input placeholder="Title" />

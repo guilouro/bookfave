@@ -23,7 +23,10 @@ const CleanButton = styled.button`
 `
 
 export const Button = styled(CleanButton)`
+  position: absolute;
   color: ${({ active }) => (active ? '#1e68c1' : '#b0b9bf')};
+  transition: 0.5s all;
+  transform: translateX(${({ active }) => (active ? '80%' : '-100%')});
 `
 
 export const Fields = styled.div`
