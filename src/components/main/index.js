@@ -1,8 +1,6 @@
 import React from 'react'
 import * as S from './styles'
-import Icon from '../icons'
 import Forms from '../forms'
-import Tag from '../tag'
 import FavoriteItem from '../favorite-item'
 
 // mock
