@@ -24,7 +24,7 @@ const FavoriteItem = ({ title, link, tags, onRemove }) => (
       </S.Tags>
     </S.Info>
     <S.Delete onClick={onRemove}>
-      <Icon name="Trash" fill="black" size="16px" />
+      <Icon name="Trash" size="16px" />
       <span>Delete</span>
     </S.Delete>
   </S.Container>
