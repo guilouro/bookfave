@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Box = styled.section`
-  padding: 10px;
+  padding: 20px;
   background: #fff;
   width: 900px;
   border-radius: 10px;
@@ -46,12 +46,26 @@ export const Tag = styled.span`
   color: #fff;
 `
 
-export const CloseTag = styled.button`
+const CleanButton = styled.button`
   outline: none;
   border: none;
   background: transparent;
-  margin: 0 0 0 10px;
+  margin: 0;
   padding: 0;
-  color: #fff;
   cursor: pointer;
+`
+
+export const CloseTag = styled(CleanButton)`
+  margin-left: 10px;
+  color: #fff;
+`
+
+export const Delete = styled(CleanButton)`
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #b0b9bf;
+  span {
+    margin-left: 5px;
+  }
 `
