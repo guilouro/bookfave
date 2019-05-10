@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import * as S from './styles'
 import Icon from '../icons'
 
-const Form = () => {
+const Forms = () => {
   const [currentType, setType] = useState('new')
   const handleClick = type => {
     setType(type)
@@ -26,6 +25,7 @@ const Form = () => {
           <S.Input placeholder="Tags" />
         </S.Fields>
       )}
+
       {currentType === 'search' && (
         <S.Fields>
           <S.Input placeholder="Search" />
@@ -36,8 +36,6 @@ const Form = () => {
 }
 
 // TODO: remove ??
-Form.propTypes = {}
+Forms.defaultProps = {}
 
-Form.defaultProps = {}
-
-export default Form
+export default Forms

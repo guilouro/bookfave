@@ -1,9 +1,10 @@
+import React from 'react'
 import { render } from 'react-testing-library'
-import Form from './'
+import Forms from '.'
 
-describe('<Form />', () => {
+describe('<Forms />', () => {
   it('Should render correctly', () => {
-    const { container } = render(<Form />)
+    const { container } = render(<Forms />)
     expect(container).toMatchSnapshot()
   })
 })
