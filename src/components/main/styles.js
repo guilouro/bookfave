@@ -7,6 +7,37 @@ export const Box = styled.section`
   border-radius: 10px;
 `
 
+export const Form = styled.div`
+  /* width: 100%; */
+  display: flex;
+  .buttons {
+    width: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .fields {
+    width: 100%;
+    display: flex;
+  }
+
+  input {
+    flex: 1;
+    border: 1px solid #e7e8eb;
+    border-radius: 4px;
+    padding: 8px 10px;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    ::placeholder {
+      color: #b0b9bf;
+    }
+  }
+`
+
 export const Item = styled.div`
   display: flex;
   justify-content: space-between;
@@ -42,7 +73,7 @@ export const Tag = styled.span`
   border-radius: 2px;
   margin-right: 10px;
   font-size: 10px;
-  background-color: #1e68c1;
+  background-color: #1e68c1; /* TODO: Define global color */
   color: #fff;
 `
 
@@ -64,7 +95,7 @@ export const Delete = styled(CleanButton)`
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  color: #b0b9bf;
+  color: #b0b9bf; /* TODO: Define global color */
   span {
     margin-left: 5px;
   }

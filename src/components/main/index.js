@@ -1,6 +1,7 @@
 import React from 'react'
 import * as S from './styles'
 import Icon from '../icons'
+import Form from '../form'
 
 // mock
 const data = [
@@ -34,10 +35,7 @@ const Main = () => (
   <main>
     <header>BOOKFAVE - Challenge</header>
     <S.Box>
-      <div className="form">
-        <Icon name="Plus" />
-        <Icon name="Search" />
-      </div>
+      <Form />
       <div className="list">
         {data.map(item => (
           <S.Item key={item.id}>
