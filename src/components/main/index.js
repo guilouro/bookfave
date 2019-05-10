@@ -2,6 +2,8 @@ import React from 'react'
 import * as S from './styles'
 import Icon from '../icons'
 import Form from '../form'
+import Tag from '../tag'
+import FavoriteItem from '../favorite-item'
 
 // mock
 const data = [
@@ -38,25 +40,13 @@ const Main = () => (
       <Form />
       <div className="list">
         {data.map(item => (
-          <S.Item key={item.id}>
-            <S.ItemContent>
-              <S.Title>{item.title}</S.Title>
-              <S.Link href={item.link} target="_blank">
-                {item.link}
-              </S.Link>
-              <div>
-                {item.tags.map(tag => (
-                  <S.Tag key={tag}>
-                    {tag} <S.CloseTag>&#10005;</S.CloseTag>
-                  </S.Tag>
-                ))}
-              </div>
-            </S.ItemContent>
-            <S.Delete>
-              <Icon name="Trash" fill="black" size="16px" />
-              <span>Delete</span>
-            </S.Delete>
-          </S.Item>
+          <FavoriteItem
+            key={item.id}
+            title={item.title}
+            link={item.link}
+            tags={item.tags}
+            onRemove={Function}
+          />
         ))}
       </div>
     </S.Box>
