@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import * as S from './styles'
 import Icon from '../icons'
 
-const Forms = () => {
+const Forms = ({ onAdd, onSearch }) => {
   const [currentType, setType] = useState('new')
   const handleClick = type => {
     setType(type)
@@ -10,11 +11,17 @@ const Forms = () => {
   return (
     <S.Container>
       <S.Menu>
-        <S.Button active={currentType === 'new'}>
-          <Icon name="Plus" onClick={() => handleClick('new')} />
+        <S.Button
+          active={currentType === 'search'}
+          onClick={() => handleClick('search')}
+        >
+          <Icon name="Search" />
         </S.Button>
-        <S.Button active={currentType === 'search'}>
-          <Icon name="Search" onClick={() => handleClick('search')} />
+        <S.Button
+          active={currentType === 'new'}
+          onClick={() => handleClick('new')}
+        >
+          <Icon name="Plus" />
         </S.Button>
       </S.Menu>
 
@@ -36,6 +43,9 @@ const Forms = () => {
 }
 
 // TODO: remove ??
-Forms.defaultProps = {}
+Forms.propTypes = {
+  onAdd: PropTypes.func.isRequired,
+  onSearch: PropTypes.func.isRequired
+}
 
 export default Forms

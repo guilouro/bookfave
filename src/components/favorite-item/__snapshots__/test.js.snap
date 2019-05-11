@@ -39,7 +39,6 @@ exports[`<FavoriteItem /> Should render correctly 1`] = `
       class="sc-EHOje sc-bZQynM bzKIkI"
     >
       <svg
-        fill="black"
         height="16px"
         viewBox="0 0 16 18"
         width="16px"

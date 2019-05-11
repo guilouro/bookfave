@@ -2,7 +2,7 @@ import React from 'react'
 import FavoriteItem from '.'
 import { render, fireEvent, cleanup } from 'react-testing-library'
 
-const mock = {
+const props = {
   id: '1',
   title: 'Crédito',
   link: 'www.bebluecredito.com.br',
@@ -14,16 +14,18 @@ describe('<FavoriteItem />', () => {
   afterEach(cleanup)
 
   it('Should render correctly', () => {
-    const { container, queryByText } = render(<FavoriteItem {...mock} />)
+    const { container, queryByText } = render(<FavoriteItem {...props} />)
 
-    expect(queryByText(mock.title)).toBeTruthy()
-    expect(queryByText(mock.link)).toBeTruthy()
+    expect(queryByText(props.title)).toBeTruthy()
+    expect(queryByText(props.link)).toBeTruthy()
     expect(container).toMatchSnapshot()
   })
 
   it('Should call onRemove', () => {
     const onRemove = jest.fn()
-    const { getByText } = render(<FavoriteItem {...mock} onRemove={onRemove} />)
+    const { getByText } = render(
+      <FavoriteItem {...props} onRemove={onRemove} />
+    )
 
     fireEvent.click(getByText(/Delete/g))
     expect(onRemove).toBeCalled()
@@ -31,7 +33,7 @@ describe('<FavoriteItem />', () => {
 
   it('Should resolve link without http', () => {
     const { container } = render(
-      <FavoriteItem {...mock} link="www.google.com" />
+      <FavoriteItem {...props} link="www.google.com" />
     )
     expect(container.querySelector('a').getAttribute('href')).toBe(
       '//www.google.com'
@@ -39,7 +41,7 @@ describe('<FavoriteItem />', () => {
   })
 
   it('Should resolve link without http and www', () => {
-    const { container } = render(<FavoriteItem {...mock} link="google.com" />)
+    const { container } = render(<FavoriteItem {...props} link="google.com" />)
     expect(container.querySelector('a').getAttribute('href')).toBe(
       '//google.com'
     )
@@ -47,7 +49,7 @@ describe('<FavoriteItem />', () => {
 
   it('Should resolve link http', () => {
     const { container } = render(
-      <FavoriteItem {...mock} link="http://google.com" />
+      <FavoriteItem {...props} link="http://google.com" />
     )
     expect(container.querySelector('a').getAttribute('href')).toBe(
       'http://google.com'

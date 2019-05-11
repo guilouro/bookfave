@@ -100,7 +100,6 @@ exports[`Main Should render correctly 1`] = `
           class="sc-gqjmRU sc-VigVT kOXgqf"
         >
           <svg
-            fill="black"
             height="16px"
             viewBox="0 0 16 18"
             width="16px"
@@ -153,7 +152,6 @@ exports[`Main Should render correctly 1`] = `
           class="sc-gqjmRU sc-VigVT kOXgqf"
         >
           <svg
-            fill="black"
             height="16px"
             viewBox="0 0 16 18"
             width="16px"
@@ -206,7 +204,6 @@ exports[`Main Should render correctly 1`] = `
           class="sc-gqjmRU sc-VigVT kOXgqf"
         >
           <svg
-            fill="black"
             height="16px"
             viewBox="0 0 16 18"
             width="16px"
@@ -279,7 +276,6 @@ exports[`Main Should render correctly 1`] = `
           class="sc-gqjmRU sc-VigVT kOXgqf"
         >
           <svg
-            fill="black"
             height="16px"
             viewBox="0 0 16 18"
             width="16px"
