@@ -29,7 +29,7 @@ export const removeFavorite = id => ({
 })
 
 // TODO: Maybe to create a Tags actions
-export const removeTag = tagName => ({
+export const removeTag = (favoriteId, tagName) => ({
   type: REMOVE_TAG,
-  payload: { tagName }
+  payload: { favoriteId, tagName }
 })

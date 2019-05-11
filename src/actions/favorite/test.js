@@ -44,13 +44,13 @@ describe('Actions - Favorite', () => {
   })
 
   it('Should create an action to remove tag', () => {
-    const payload = { tagName: 'wallet' }
+    const payload = { favoriteId: 1, tagName: 'wallet' }
 
     const expected = {
       type: REMOVE_TAG,
       payload
     }
 
-    expect(removeTag('wallet')).toEqual(expected)
+    expect(removeTag(1, 'wallet')).toEqual(expected)
   })
 })
