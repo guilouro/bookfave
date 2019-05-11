@@ -3,6 +3,7 @@ import uuid from 'uuid/v4'
 export const ADD = '@favorite/ADD'
 export const REMOVE = '@favorite/REMOVE'
 export const REMOVE_TAG = '@tag/REMOVE'
+export const FILTER = '@tag/FILTER'
 
 const parseTags = tags => {
   const obj = {}
@@ -32,4 +33,9 @@ export const removeFavorite = id => ({
 export const removeTag = (favoriteId, tagName) => ({
   type: REMOVE_TAG,
   payload: { favoriteId, tagName }
+})
+
+export const filterByTag = tagName => ({
+  type: FILTER,
+  payload: { tagName }
 })

@@ -1,11 +1,12 @@
-import { ADD, REMOVE, REMOVE_TAG } from '../../actions/favorite'
+import { ADD, REMOVE, REMOVE_TAG, FILTER } from '../../actions/favorite'
 
 const initialState = {
+  filterTag: '',
   entities: {},
   ids: []
 }
 
-const favorites = (state = initialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case ADD:
       return {
@@ -44,9 +45,20 @@ const favorites = (state = initialState, action) => {
       }
     }
 
+    case FILTER:
+      return {
+        ...state,
+        filterTag: action.payload.tagName
+      }
+
     default:
       return state
   }
 }
 
-export default favorites
+export const searchIdByTag = (state, tagName) => {
+  const items = Object.values(state.entities).filter(
+    item => !!item.tags[tagName]
+  )
+  return items.map(({ id }) => id)
+}

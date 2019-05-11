@@ -4,7 +4,9 @@ import {
   REMOVE_TAG,
   addFavorite,
   removeFavorite,
-  removeTag
+  removeTag,
+  FILTER,
+  filterByTag
 } from '.'
 
 jest.mock('uuid/v4', () => jest.fn(() => 1))
@@ -52,5 +54,16 @@ describe('Actions - Favorite', () => {
     }
 
     expect(removeTag(1, 'wallet')).toEqual(expected)
+  })
+
+  it('Should create an action to filter tag', () => {
+    const payload = { tagName: 'wallet' }
+
+    const expected = {
+      type: FILTER,
+      payload
+    }
+
+    expect(filterByTag('wallet')).toEqual(expected)
   })
 })
