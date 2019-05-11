@@ -1,12 +1,12 @@
 import uuid from 'uuid/v4'
 
-const ADD = '@favorite/ADD'
-const REMOVE = '@favorite/REMOVE'
-const REMOVE_TAG = '@tag/REMOVE'
+export const ADD = '@favorite/ADD'
+export const REMOVE = '@favorite/REMOVE'
+export const REMOVE_TAG = '@tag/REMOVE'
 
 const parseTags = tags => {
   const obj = {}
-  tags.split('').forEach(tag => {
+  tags.split(' ').forEach(tag => {
     obj[tag] = true
   })
 
