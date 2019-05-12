@@ -9,7 +9,14 @@ const formatLink = link => {
   return isValid ? link : `//${link}`
 }
 
-const FavoriteItem = ({ title, link, tags, onRemove, onRemoveTag }) => (
+const FavoriteItem = ({
+  title,
+  link,
+  tags,
+  onRemove,
+  onFilterTag,
+  onRemoveTag
+}) => (
   <S.Container>
     <S.Info>
       <S.Title>{title}</S.Title>
@@ -19,7 +26,12 @@ const FavoriteItem = ({ title, link, tags, onRemove, onRemoveTag }) => (
 
       <S.Tags>
         {tags.map(tag => (
-          <Tag key={tag} name={tag} onClose={() => onRemoveTag(tag)} />
+          <Tag
+            key={tag}
+            name={tag}
+            onClick={() => onFilterTag(tag)}
+            onClose={() => onRemoveTag(tag)}
+          />
         ))}
       </S.Tags>
     </S.Info>
@@ -31,6 +43,7 @@ const FavoriteItem = ({ title, link, tags, onRemove, onRemoveTag }) => (
 )
 
 FavoriteItem.propTypes = {
+  onFilterTag: PropTypes.func.isRequired,
   onRemove: PropTypes.func.isRequired,
   onRemoveTag: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
