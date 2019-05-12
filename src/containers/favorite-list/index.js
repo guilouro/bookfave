@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import FavoriteItem from '../../components/favorite-item'
 import { searchIdByTag } from '../../reducers/favorites'
-import { removeFavorite } from '../../actions/favorites'
+import { removeFavorite, removeTag } from '../../actions/favorites'
 
-const FavoriteList = ({ favorites, onRemoveItem }) =>
+const FavoriteList = ({ favorites, onRemoveItem, onRemoveTag }) =>
   favorites.map(item => (
     <FavoriteItem
       key={item.id}
@@ -13,12 +13,14 @@ const FavoriteList = ({ favorites, onRemoveItem }) =>
       link={item.link}
       tags={Object.keys(item.tags)}
       onRemove={() => onRemoveItem(item.id)}
+      onRemoveTag={tagName => onRemoveTag(item.id, tagName)}
     />
   ))
 
 FavoriteList.propTypes = {
   favorites: PropTypes.array,
-  onRemoveItem: PropTypes.func
+  onRemoveItem: PropTypes.func,
+  onRemoveTag: PropTypes.func
 }
 
 const mapStateToProps = state => {
@@ -30,5 +32,8 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { onRemoveItem: removeFavorite }
+  {
+    onRemoveItem: removeFavorite,
+    onRemoveTag: removeTag
+  }
 )(FavoriteList)

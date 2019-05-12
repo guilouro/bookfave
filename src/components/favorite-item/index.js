@@ -19,7 +19,7 @@ const FavoriteItem = ({ title, link, tags, onRemove, onRemoveTag }) => (
 
       <S.Tags>
         {tags.map(tag => (
-          <Tag key={tag} name={tag} onClose={onRemoveTag} />
+          <Tag key={tag} name={tag} onClose={() => onRemoveTag(tag)} />
         ))}
       </S.Tags>
     </S.Info>
