@@ -1,5 +1,5 @@
 import reducer, { searchIdByTag } from '.'
-import { ADD, REMOVE, REMOVE_TAG, FILTER } from '../../actions/favorite'
+import { ADD, REMOVE, REMOVE_TAG, FILTER } from '../../actions/favorites'
 
 const initialState = {
   filterTag: '',

@@ -16,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
   }
+
+  form {
+    width: 100%;
+  }
 `
 
 export default GlobalStyle

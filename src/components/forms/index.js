@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { Form, withContextForm, Submit } from 'formcat'
 import * as S from './styles'
 import Icon from '../icons'
+
+const InputField = withContextForm(props => <S.Input {...props} />)
 
 const Forms = ({ onAdd, onSearch }) => {
   const [currentType, setType] = useState('new')
@@ -26,17 +29,23 @@ const Forms = ({ onAdd, onSearch }) => {
       </S.Menu>
 
       {currentType === 'new' && (
-        <S.Fields>
-          <S.Input placeholder="Title" />
-          <S.Input placeholder="Link" />
-          <S.Input placeholder="Tags" />
-        </S.Fields>
+        <Form onSubmit={onAdd}>
+          <S.Fields>
+            <InputField name="title" placeholder="Title" required />
+            <InputField name="link" placeholder="Link" required />
+            <InputField name="tags" placeholder="Tags" />
+            <Submit>Add</Submit>
+          </S.Fields>
+        </Form>
       )}
 
       {currentType === 'search' && (
-        <S.Fields>
-          <S.Input placeholder="Search" />
-        </S.Fields>
+        <Form onSubmit={onSearch}>
+          <S.Fields>
+            <InputField name="tagName" placeholder="Search" />
+            <Submit>Search</Submit>
+          </S.Fields>
+        </Form>
       )}
     </S.Container>
   )

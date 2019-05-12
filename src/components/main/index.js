@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styles'
-import FavoriteItem from '../favorite-item'
 import FormHandler from '../../containers/form-handle'
+import FavoriteList from '../../containers/favorite-list'
 
 // mock
 const data = [
@@ -36,15 +36,7 @@ const Main = () => (
     <header>BOOKFAVE - Challenge</header>
     <S.Box>
       <FormHandler />
-      {data.map(item => (
-        <FavoriteItem
-          key={item.id}
-          title={item.title}
-          link={item.link}
-          tags={item.tags}
-          onRemove={Function}
-        />
-      ))}
+      <FavoriteList />
     </S.Box>
   </main>
 )

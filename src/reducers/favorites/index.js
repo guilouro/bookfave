@@ -1,4 +1,4 @@
-import { ADD, REMOVE, REMOVE_TAG, FILTER } from '../../actions/favorite'
+import { ADD, REMOVE, REMOVE_TAG, FILTER } from '../../actions/favorites'
 
 const initialState = {
   filterTag: '',
@@ -56,8 +56,8 @@ export default (state = initialState, action) => {
   }
 }
 
-export const searchIdByTag = (state, tagName) => {
-  const items = Object.values(state.entities).filter(
+export const searchIdByTag = (favorites, tagName) => {
+  const items = Object.values(favorites.entities).filter(
     item => !!item.tags[tagName]
   )
   return items.map(({ id }) => id)

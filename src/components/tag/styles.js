@@ -11,6 +11,7 @@ export const Container = styled.span`
   font-size: 10px;
   background-color: #1e68c1; /* TODO: Define global color */
   color: #fff;
+  cursor: pointer;
 `
 
 // TODO: Creacte global
