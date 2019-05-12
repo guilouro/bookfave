@@ -16,7 +16,7 @@ describe('Actions - Favorite', () => {
     const payload = {
       title: 'Lorem ipsum',
       link: 'www.lorenipsum.com.br',
-      tags: 'wallet credito'
+      tags: 'WALLET credito'
     }
 
     const expected = {

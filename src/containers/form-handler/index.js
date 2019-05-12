@@ -16,7 +16,7 @@ const FormHandler = ({ onAddFavorite, onFilterByTag }) => {
 
   const handleSearch = ({ data }) => {
     console.log('serach', data)
-    onFilterByTag(data.tagName)
+    onFilterByTag(data.tagName.toLowerCase())
   }
   return <Forms onAdd={handleAdd} onSearch={handleSearch} />
 }

@@ -39,22 +39,39 @@ exports[`<Forms /> Should render correctly 1`] = `
         </svg>
       </button>
     </div>
-    <div
-      class="sc-ifAKCX kVDFCl"
+    <form
+      novalidate=""
     >
-      <input
-        class="sc-EHOje ewDNmQ"
-        placeholder="Title"
-      />
-      <input
-        class="sc-EHOje ewDNmQ"
-        placeholder="Link"
-      />
-      <input
-        class="sc-EHOje ewDNmQ"
-        placeholder="Tags"
-      />
-    </div>
+      <div
+        class="sc-ifAKCX kVDFCl"
+      >
+        <input
+          class="sc-EHOje ewDNmQ"
+          name="title"
+          placeholder="Title"
+          required=""
+          value=""
+        />
+        <input
+          class="sc-EHOje ewDNmQ"
+          name="link"
+          placeholder="Link"
+          required=""
+          value=""
+        />
+        <input
+          class="sc-EHOje ewDNmQ"
+          name="tags"
+          placeholder="Tags"
+          value=""
+        />
+        <button
+          type="submit"
+        >
+          Add
+        </button>
+      </div>
+    </form>
   </div>
 </div>
 `;

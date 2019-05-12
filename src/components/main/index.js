@@ -1,6 +1,6 @@
 import React from 'react'
 import * as S from './styles'
-import FormHandler from '../../containers/form-handle'
+import FormHandler from '../../containers/form-handler'
 import FavoriteList from '../../containers/favorite-list'
 
 // mock

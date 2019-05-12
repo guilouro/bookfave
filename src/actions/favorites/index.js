@@ -8,7 +8,7 @@ export const FILTER = '@tag/FILTER'
 const parseTags = tags => {
   const obj = {}
   tags.split(' ').forEach(tag => {
-    obj[tag] = true
+    obj[tag.toLowerCase()] = true
   })
 
   return obj
