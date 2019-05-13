@@ -31,7 +31,7 @@ const Forms = ({ onAdd, onSearch }) => {
       </S.Menu>
 
       {currentType === 'new' && (
-        <Form onSubmit={onAdd}>
+        <Form keyUpValidation onSubmit={onAdd}>
           <S.Fields>
             <InputField name="title" placeholder="Title" required />
             <InputField name="link" placeholder="Link" required />
@@ -42,7 +42,7 @@ const Forms = ({ onAdd, onSearch }) => {
       )}
 
       {currentType === 'search' && (
-        <Form onSubmit={onSearch}>
+        <Form keyUpValidation onSubmit={onSearch}>
           <S.Fields>
             <InputField name="tagName" placeholder="Search" />
             <Submit>Search</Submit>

@@ -1,14 +1,164 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FormHandler /> Should render correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  width: 70px;
+  height: 35px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.c2 {
+  outline: none;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  color: #b0b9bf;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.c3 {
+  outline: none;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  color: #1e68c1;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-transform: translateX(80%);
+  -ms-transform: translateX(80%);
+  transform: translateX(80%);
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c4 button {
+  background-color: #1e68c1;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.c4 button:disabled {
+  background-color: #b0b9bf;
+}
+
+.c5 {
+  border: 1px solid #e7e8eb;
+  border-radius: 4px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+}
+
+.c5::-webkit-input-placeholder {
+  color: #b0b9bf;
+}
+
+.c5::-moz-placeholder {
+  color: #b0b9bf;
+}
+
+.c5:-ms-input-placeholder {
+  color: #b0b9bf;
+}
+
+.c5::placeholder {
+  color: #b0b9bf;
+}
+
+@media (min-width:900px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:600px) {
+  .c4 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:900px) {
+  .c4 button {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width:600px) {
+  .c5 {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 0;
+  }
+
+  .c5:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
 <div
-  class="sc-bdVaJa gtODql"
+  class="c0"
 >
   <div
-    class="sc-bwzfXH dOEENz"
+    class="c1"
   >
     <button
-      class="sc-htpNat sc-bxivhb fSgGqO"
+      class="c2"
     >
       <svg
         height="20px"
@@ -23,7 +173,7 @@ exports[`<FormHandler /> Should render correctly 1`] = `
       </svg>
     </button>
     <button
-      class="sc-htpNat sc-bxivhb fzDMrC"
+      class="c3"
     >
       <svg
         height="20px"
@@ -42,24 +192,24 @@ exports[`<FormHandler /> Should render correctly 1`] = `
     novalidate=""
   >
     <div
-      class="sc-ifAKCX iPZVBd"
+      class="c4"
     >
       <input
-        class="sc-EHOje gmOzGi"
+        class="c5"
         name="title"
         placeholder="Title"
         required=""
         value=""
       />
       <input
-        class="sc-EHOje gmOzGi"
+        class="c5"
         name="link"
         placeholder="Link"
         required=""
         value=""
       />
       <input
-        class="sc-EHOje gmOzGi"
+        class="c5"
         name="tags"
         placeholder="Tags"
         value=""

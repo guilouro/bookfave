@@ -1,5 +1,5 @@
 import React from 'react'
-import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { createStore, combineReducers } from 'redux'
 import { render } from 'react-testing-library'
 import { Provider } from 'react-redux'
 

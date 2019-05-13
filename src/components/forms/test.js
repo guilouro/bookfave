@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, fireEvent, cleanup } from 'react-testing-library'
+import { render, fireEvent } from 'react-testing-library'
 import Forms from '.'
 
 const props = {
@@ -8,7 +8,6 @@ const props = {
 }
 
 describe('<Forms />', () => {
-  afterEach(cleanup)
   it('Should render correctly', () => {
     const { container } = render(<Forms {...props} />)
 

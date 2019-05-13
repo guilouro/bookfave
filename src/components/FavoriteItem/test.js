@@ -1,6 +1,6 @@
 import React from 'react'
 import FavoriteItem from '.'
-import { render, fireEvent, cleanup } from 'react-testing-library'
+import { render, fireEvent } from 'react-testing-library'
 
 const props = {
   id: '1',
@@ -13,8 +13,6 @@ const props = {
 }
 
 describe('<FavoriteItem />', () => {
-  afterEach(cleanup)
-
   it('Should render correctly', () => {
     const { container, queryByText } = render(<FavoriteItem {...props} />)
 

@@ -1,11 +1,10 @@
 import React from 'react'
-import { cleanup, fireEvent } from 'react-testing-library'
+import { fireEvent } from 'react-testing-library'
 import FilteredBy from '.'
 import { mockStore, renderWithRedux } from '../../../.test-config/redux-mock'
 import { filterByTag } from '../../actions/favorites'
 
 describe('<FilteredBy />', () => {
-  afterEach(cleanup)
   describe('without tagName', () => {
     const store = mockStore({
       favorites: {

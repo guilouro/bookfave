@@ -1,14 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tag Should render correctly 1`] = `
+.c0 {
+  min-width: 70px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 3px 5px;
+  border-radius: 2px;
+  margin-right: 10px;
+  font-size: 10px;
+  background-color: #1e68c1;
+  color: #fff;
+  cursor: pointer;
+}
+
+.c1 {
+  outline: none;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  margin-left: 10px;
+  color: #fff;
+}
+
 <span
-  class="sc-bdVaJa eeVrHu"
+  class="c0"
 >
   <span>
     wallet
   </span>
   <button
-    class="sc-bwzfXH sc-htpNat chgZfo"
+    class="c1"
   >
     ✕
   </button>
