@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from '../../utils.styles'
 
 export const Main = styled.main`
   width: 100%;
@@ -18,7 +19,7 @@ export const Header = styled.header`
 `
 
 export const Description = styled.span`
-  color: #b0b9bf; /* TODO: Define global color */
+  color: ${colors.secondary};
 `
 
 export const Box = styled.section`

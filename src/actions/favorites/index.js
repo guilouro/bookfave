@@ -29,7 +29,6 @@ export const removeFavorite = id => ({
   payload: { id }
 })
 
-// TODO: Maybe to create a Tags actions
 export const removeTag = (favoriteId, tagName) => ({
   type: REMOVE_TAG,
   payload: { favoriteId, tagName }

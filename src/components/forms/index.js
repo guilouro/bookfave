@@ -53,7 +53,6 @@ const Forms = ({ onAdd, onSearch }) => {
   )
 }
 
-// TODO: remove ??
 Forms.propTypes = {
   onAdd: PropTypes.func.isRequired,
   onSearch: PropTypes.func.isRequired

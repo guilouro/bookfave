@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { CleanButton, colors } from '../../utils.styles'
 
 export const Container = styled.div`
   display: flex;
@@ -21,27 +22,17 @@ export const Title = styled.h2`
 
 export const Link = styled.a`
   font-size: 12px;
-  color: #04a0ff;
+  color: ${colors.link};
   text-decoration: none;
   margin: 10px 0;
   display: table;
-`
-
-// TODO: Criar global
-const CleanButton = styled.button`
-  outline: none;
-  border: none;
-  background: transparent;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
 `
 
 export const Delete = styled(CleanButton)`
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  color: #b0b9bf; /* TODO: Define global color */
+  color: ${colors.secondary};
   span {
     margin-left: 5px;
   }

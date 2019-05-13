@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { CleanButton, colors } from '../../utils.styles'
 
 export const Container = styled.span`
   min-width: 70px;
@@ -10,18 +11,8 @@ export const Container = styled.span`
   border-radius: 2px;
   margin-right: 10px;
   font-size: 10px;
-  background-color: #1e68c1; /* TODO: Define global color */
+  background-color: ${colors.primary};
   color: #fff;
-  cursor: pointer;
-`
-
-// TODO: Creacte global
-const CleanButton = styled.button`
-  outline: none;
-  border: none;
-  background: transparent;
-  margin: 0;
-  padding: 0;
   cursor: pointer;
 `
 

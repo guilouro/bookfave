@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { CleanButton, colors } from '../../utils.styles'
 
 export const Container = styled.div`
   display: flex;
@@ -20,19 +21,9 @@ export const Menu = styled.div`
   margin-right: 10px;
 `
 
-// TODO: Set global
-const CleanButton = styled.button`
-  outline: none;
-  border: none;
-  background: transparent;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-`
-
 export const Button = styled(CleanButton)`
   position: absolute;
-  color: ${({ active }) => (active ? '#1e68c1' : '#b0b9bf')};
+  color: ${({ active }) => (active ? colors.primary : colors.secondary)};
   transition: 0.5s all;
   transform: translateX(${({ active }) => (active ? '80%' : '-100%')});
 `
@@ -47,14 +38,14 @@ export const Fields = styled.div`
   }
 
   button {
-    background-color: #1e68c1;
+    background-color: ${colors.primary};
     color: #fff;
     border: none;
     padding: 10px;
     border-radius: 5px;
 
     &:disabled {
-      background-color: #b0b9bf;
+      background-color: ${colors.secondary};
     }
 
     @media (min-width: 900px) {
@@ -71,7 +62,7 @@ export const Input = styled.input`
   margin-bottom: 10px;
 
   ::placeholder {
-    color: #b0b9bf;
+    color: ${colors.secondary};
   }
 
   @media (min-width: 600px) {
