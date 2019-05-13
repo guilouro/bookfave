@@ -1,5 +1,7 @@
 # BOOKFAVE
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3b7e2956-288f-497f-9473-3f88b0cf8b4f/deploy-status)](https://app.netlify.com/sites/bookfave/deploys)
+
 You can see the example in [https://bookfave.netlify.com/](https://bookfave.netlify.com/)
 
 ### How to use
