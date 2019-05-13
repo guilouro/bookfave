@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styles'
-import FormHandler from '../../containers/form-handler'
-import FavoriteList from '../../containers/favorite-list'
+import FormHandler from '../../containers/FormHandler'
+import FavoriteList from '../../containers/FavoriteList'
 
 // mock
 const data = [
@@ -32,13 +32,15 @@ const data = [
 ]
 
 const Main = () => (
-  <main>
+  <S.Main>
     <header>BOOKFAVE - Challenge</header>
     <S.Box>
       <FormHandler />
-      <FavoriteList />
+      <S.Content>
+        <FavoriteList />
+      </S.Content>
     </S.Box>
-  </main>
+  </S.Main>
 )
 
 export default Main

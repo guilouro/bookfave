@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Forms from '../../components/forms'
+import Forms from '../../components/Forms'
 import { addFavorite, filterByTag } from '../../actions/favorites'
 
 const FormHandler = ({ onAddFavorite, onFilterByTag }) => {

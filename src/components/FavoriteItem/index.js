@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import * as S from './styles'
-import Tag from '../tag'
-import Icon from '../icons'
+import Tag from '../Tag'
+import Icon from '../Icons'
 
 const formatLink = link => {
   const isValid = /^(http|\/\/)/i.test(link)

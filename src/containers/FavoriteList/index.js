@@ -1,22 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import FavoriteItem from '../../components/favorite-item'
+import FavoriteItem from '../../components/FavoriteItem'
 import { searchIdByTag } from '../../reducers/favorites'
 import { removeFavorite, removeTag, filterByTag } from '../../actions/favorites'
+import EmptyList from '../../components/EmptyList'
 
 const FavoriteList = ({ favorites, onRemoveItem, onRemoveTag, onFilterTag }) =>
-  favorites.map(item => (
-    <FavoriteItem
-      key={item.id}
-      title={item.title}
-      link={item.link}
-      tags={Object.keys(item.tags)}
-      onFilterTag={tagName => onFilterTag(tagName)}
-      onRemoveTag={tagName => onRemoveTag(item.id, tagName)}
-      onRemove={() => onRemoveItem(item.id)}
-    />
-  ))
+  !favorites.length ? (
+    <EmptyList />
+  ) : (
+    favorites.map(item => (
+      <FavoriteItem
+        key={item.id}
+        title={item.title}
+        link={item.link}
+        tags={Object.keys(item.tags)}
+        onFilterTag={tagName => onFilterTag(tagName)}
+        onRemoveTag={tagName => onRemoveTag(item.id, tagName)}
+        onRemove={() => onRemoveItem(item.id)}
+      />
+    ))
+  )
 
 FavoriteList.propTypes = {
   favorites: PropTypes.array,

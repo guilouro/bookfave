@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Form, withContextForm, Submit } from 'formcat'
 import * as S from './styles'
-import Icon from '../icons'
+import Icon from '../Icons'
 
 const InputField = withContextForm(props => <S.Input {...props} />)
 
