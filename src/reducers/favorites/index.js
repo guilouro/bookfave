@@ -19,26 +19,26 @@ export default (state = initialState, action) => {
       }
 
     case REMOVE: {
-      const { [action.payload.id]: key, ...restEntities } = state.entities
+      const { id } = action.payload
+      const { [id]: key, ...restEntities } = state.entities
       return {
         ...state,
         entities: restEntities,
-        ids: state.ids.filter(id => id !== action.payload.id)
+        ids: state.ids.filter(stateId => stateId !== id)
       }
     }
 
     case REMOVE_TAG: {
-      // TODO: Need refactor
-      const { [action.payload.tagName]: key, ...restTags } = state.entities[
-        action.payload.favoriteId
-      ].tags
+      const { favoriteId, tagName } = action.payload
+      const { tags } = state.entities[favoriteId]
+      const { [tagName]: key, ...restTags } = tags
 
       return {
         ...state,
         entities: {
           ...state.entities,
-          [action.payload.favoriteId]: {
-            ...state.entities[action.payload.favoriteId],
+          [favoriteId]: {
+            ...state.entities[favoriteId],
             tags: restTags
           }
         }
