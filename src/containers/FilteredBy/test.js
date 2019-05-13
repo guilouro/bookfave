@@ -1,7 +1,8 @@
 import React from 'react'
-import { cleanup } from 'react-testing-library'
+import { cleanup, fireEvent } from 'react-testing-library'
 import FilteredBy from '.'
 import { mockStore, renderWithRedux } from '../../../.test-config/redux-mock'
+import { filterByTag } from '../../actions/favorites'
 
 describe('<FilteredBy />', () => {
   afterEach(cleanup)
@@ -35,6 +36,14 @@ describe('<FilteredBy />', () => {
 
       expect(queryByText(/wallet/g)).toBeTruthy()
       expect(container.firstChild).toMatchSnapshot()
+    })
+
+    it('Should called close tag', () => {
+      store.dispatch = jest.fn()
+      const { container } = renderWithRedux(<FilteredBy />, store)
+
+      fireEvent.click(container.querySelector('button'))
+      expect(store.dispatch).toBeCalledWith(filterByTag(''))
     })
   })
 })
