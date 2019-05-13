@@ -26,7 +26,9 @@ exports[`<FavoriteItem /> Should render correctly 1`] = `
         <span
           class="sc-gzVnrw gHvIos"
         >
-          crédito
+          <span>
+            crédito
+          </span>
           <button
             class="sc-htoDjs sc-dnqmqq haMeb"
           >
