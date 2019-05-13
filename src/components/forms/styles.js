@@ -39,13 +39,11 @@ export const Button = styled(CleanButton)`
 
 export const Fields = styled.div`
   width: 100%;
-  height: 160px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: 600px) {
     flex-direction: row;
-    height: initial;
   }
 
   button {

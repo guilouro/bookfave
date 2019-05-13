@@ -8,9 +8,11 @@ const InputField = withContextForm(props => <S.Input {...props} />)
 
 const Forms = ({ onAdd, onSearch }) => {
   const [currentType, setType] = useState('new')
+
   const handleClick = type => {
     setType(type)
   }
+
   return (
     <S.Container>
       <S.Menu>

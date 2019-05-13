@@ -4,9 +4,8 @@ import { connect } from 'react-redux'
 import Forms from '../../components/Forms'
 import { addFavorite, filterByTag } from '../../actions/favorites'
 
-const FormHandler = ({ onAddFavorite, onFilterByTag }) => {
+const FormHandler = ({ onAddFavorite, onFilterByTag, filterTag }) => {
   const handleAdd = ({ data }) => {
-    console.log('add', data)
     onAddFavorite({
       title: data.title,
       link: data.link,
@@ -15,19 +14,30 @@ const FormHandler = ({ onAddFavorite, onFilterByTag }) => {
   }
 
   const handleSearch = ({ data }) => {
-    console.log('serach', data)
     onFilterByTag(data.tagName.toLowerCase())
   }
-  return <Forms onAdd={handleAdd} onSearch={handleSearch} />
+
+  return (
+    <Forms onAdd={handleAdd} onSearch={handleSearch} filterTag={filterTag} />
+  )
 }
 
 FormHandler.propTypes = {
   onAddFavorite: PropTypes.func.isRequired,
-  onFilterByTag: PropTypes.func.isRequired
+  onFilterByTag: PropTypes.func.isRequired,
+  filterTag: PropTypes.string
 }
 
+FormHandler.defaultProps = {
+  filterTag: ''
+}
+
+const mapStateToProps = ({ favorites }) => ({
+  filterBy: favorites.filterTag
+})
+
 export default connect(
-  null,
+  mapStateToProps,
   {
     onAddFavorite: addFavorite,
     onFilterByTag: filterByTag

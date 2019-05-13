@@ -2,6 +2,8 @@ import React from 'react'
 import * as S from './styles'
 import FormHandler from '../../containers/FormHandler'
 import FavoriteList from '../../containers/FavoriteList'
+import Tag from '../Tag'
+import FilteredBy from '../../containers/FilteredBy'
 
 // mock
 const data = [
@@ -39,6 +41,7 @@ const Main = () => (
     </S.Header>
     <S.Box>
       <FormHandler />
+      <FilteredBy />
       <S.Content>
         <FavoriteList />
       </S.Content>

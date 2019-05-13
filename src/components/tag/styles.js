@@ -4,6 +4,7 @@ export const Container = styled.span`
   min-width: 70px;
   display: inline-flex;
   justify-content: space-between;
+  align-items: center;
   text-transform: uppercase;
   padding: 3px 5px;
   border-radius: 2px;

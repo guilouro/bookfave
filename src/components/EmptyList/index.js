@@ -5,7 +5,7 @@ import Icon from '../Icons'
 const EmptyList = () => (
   <S.Container>
     <Icon name="Empty" size="50px" />
-    <p>We haven't any favorite yet</p>
+    <p>We don't have any favorite</p>
   </S.Container>
 )
 
