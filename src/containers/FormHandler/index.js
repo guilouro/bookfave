@@ -13,8 +13,8 @@ const FormHandler = ({ onAddFavorite, onFilterByTag, filterTag }) => {
     })
   }
 
-  const handleSearch = ({ data }) => {
-    onFilterByTag(data.tagName.toLowerCase())
+  const handleSearch = tagName => {
+    onFilterByTag(tagName.toLowerCase())
   }
 
   return (

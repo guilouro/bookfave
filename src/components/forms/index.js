@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
+import { debounce } from 'lodash'
 import { Form, withContextForm, Submit } from 'formcat'
 import * as S from './styles'
 import Icon from '../Icons'
@@ -8,6 +9,24 @@ const InputField = withContextForm(props => <S.Input {...props} />)
 
 const Forms = ({ onAdd, onSearch }) => {
   const [currentType, setType] = useState('new')
+
+  const form = useRef(null)
+
+  const doSearch = debounce(e => {
+    onSearch(e.target.value)
+  }, 250)
+
+  const handleSearch = e => {
+    e.persist()
+    doSearch(e)
+  }
+
+  const handleSubmit = data => {
+    onAdd(data)
+    form.current.updateFieldValue('title', '')
+    form.current.updateFieldValue('link', '')
+    form.current.updateFieldValue('tags', '')
+  }
 
   const handleClick = type => {
     setType(type)
@@ -31,7 +50,7 @@ const Forms = ({ onAdd, onSearch }) => {
       </S.Menu>
 
       {currentType === 'new' && (
-        <Form keyUpValidation onSubmit={onAdd}>
+        <Form ref={form} keyUpValidation onSubmit={handleSubmit}>
           <S.Fields>
             <InputField name="title" placeholder="Title" required />
             <InputField name="link" placeholder="Link" required />
@@ -42,10 +61,13 @@ const Forms = ({ onAdd, onSearch }) => {
       )}
 
       {currentType === 'search' && (
-        <Form keyUpValidation onSubmit={onSearch}>
+        <Form>
           <S.Fields>
-            <InputField name="tagName" placeholder="Search" />
-            <Submit>Search</Submit>
+            <InputField
+              name="tagName"
+              placeholder="Search"
+              onChange={handleSearch}
+            />
           </S.Fields>
         </Form>
       )}
