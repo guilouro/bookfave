@@ -7,7 +7,9 @@ const props = {
   title: 'Crédito',
   link: 'www.bebluecredito.com.br',
   tags: ['crédito'],
-  onRemove: jest.fn()
+  onRemove: jest.fn(),
+  onRemoveTag: jest.fn(),
+  onFilterTag: jest.fn()
 }
 
 describe('<FavoriteItem />', () => {
@@ -29,6 +31,26 @@ describe('<FavoriteItem />', () => {
 
     fireEvent.click(getByText(/Delete/g))
     expect(onRemove).toBeCalled()
+  })
+
+  it('Should call onRemoveTag', () => {
+    const onRemoveTag = jest.fn()
+    const { getByText } = render(
+      <FavoriteItem {...props} onRemoveTag={onRemoveTag} />
+    )
+
+    fireEvent.click(getByText(/✕/g))
+    expect(onRemoveTag).toBeCalledWith(props.tags[0])
+  })
+
+  it('Should call onFilterTag', () => {
+    const onFilterTag = jest.fn()
+    const { getByText } = render(
+      <FavoriteItem {...props} onFilterTag={onFilterTag} />
+    )
+
+    fireEvent.click(getByText(props.tags[0]))
+    expect(onFilterTag).toBeCalledWith(props.tags[0])
   })
 
   it('Should resolve link without http', () => {

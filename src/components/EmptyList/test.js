@@ -5,7 +5,7 @@ import { render } from 'react-testing-library'
 describe('EmptyList', () => {
   it('Should render correctly', () => {
     const { container, queryByText } = render(<EmptyList />)
-    expect(queryByText(/We haven't any favorite yet/g)).toBeTruthy()
+    expect(queryByText(/We don't have any favorite/g)).toBeTruthy()
     expect(container).toMatchSnapshot()
   })
 })

@@ -3,10 +3,10 @@
 exports[`<Forms /> Should render correctly 1`] = `
 <div>
   <div
-    class="sc-bdVaJa kZAgjJ"
+    class="sc-bdVaJa gtODql"
   >
     <div
-      class="sc-bwzfXH fvLWqH"
+      class="sc-bwzfXH dOEENz"
     >
       <button
         class="sc-htpNat sc-bxivhb fSgGqO"
@@ -43,24 +43,24 @@ exports[`<Forms /> Should render correctly 1`] = `
       novalidate=""
     >
       <div
-        class="sc-ifAKCX kVDFCl"
+        class="sc-ifAKCX iPZVBd"
       >
         <input
-          class="sc-EHOje ewDNmQ"
+          class="sc-EHOje gmOzGi"
           name="title"
           placeholder="Title"
           required=""
           value=""
         />
         <input
-          class="sc-EHOje ewDNmQ"
+          class="sc-EHOje gmOzGi"
           name="link"
           placeholder="Link"
           required=""
           value=""
         />
         <input
-          class="sc-EHOje ewDNmQ"
+          class="sc-EHOje gmOzGi"
           name="tags"
           placeholder="Tags"
           value=""

@@ -3,9 +3,11 @@
 exports[`Tag Should render correctly 1`] = `
 <div>
   <span
-    class="sc-bdVaJa huRgzJ"
+    class="sc-bdVaJa eeVrHu"
   >
-    wallet
+    <span>
+      wallet
+    </span>
     <button
       class="sc-bwzfXH sc-htpNat chgZfo"
     >

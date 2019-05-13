@@ -3,7 +3,7 @@
 exports[`EmptyList Should render correctly 1`] = `
 <div>
   <div
-    class="sc-bdVaJa jYahsi"
+    class="sc-bdVaJa TPghH"
   >
     <svg
       fill="currentColor"
@@ -20,7 +20,7 @@ exports[`EmptyList Should render correctly 1`] = `
       />
     </svg>
     <p>
-      We haven't any favorite yet
+      We don't have any favorite
     </p>
   </div>
 </div>
