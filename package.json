@@ -1,7 +1,7 @@
 {
-  "name": "simple-react-quick-start",
+  "name": "bookfave",
   "version": "1.0.0",
-  "description": "React quick start",
+  "description": "An example of favorites book with react",
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server",
