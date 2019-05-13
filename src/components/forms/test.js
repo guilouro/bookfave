@@ -14,7 +14,7 @@ describe('<Forms />', () => {
 
     expect(container.querySelectorAll('svg')).toHaveLength(2)
     expect(container.querySelectorAll('input')).toHaveLength(3)
-    expect(container).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('Should change menu to Search when clicked', () => {

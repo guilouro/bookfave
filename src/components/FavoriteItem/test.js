@@ -20,7 +20,7 @@ describe('<FavoriteItem />', () => {
 
     expect(queryByText(props.title)).toBeTruthy()
     expect(queryByText(props.link)).toBeTruthy()
-    expect(container).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('Should call onRemove', () => {

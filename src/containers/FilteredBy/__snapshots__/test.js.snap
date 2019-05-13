@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilteredBy /> with tagName Should render correctly 1`] = `
+<p>
+  Filtered by: 
+  <span
+    class="sc-bdVaJa eeVrHu"
+  >
+    <span>
+      wallet
+    </span>
+    <button
+      class="sc-bwzfXH sc-htpNat chgZfo"
+    >
+      ✕
+    </button>
+  </span>
+</p>
+`;

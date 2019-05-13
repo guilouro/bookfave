@@ -9,7 +9,7 @@ describe('Tag', () => {
     )
 
     expect(queryByText(/wallet/g)).toBeTruthy()
-    expect(container).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('Should call onClose when clicked', () => {

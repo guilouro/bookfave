@@ -1,18 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tag Should render correctly 1`] = `
-<div>
-  <span
-    class="sc-bdVaJa eeVrHu"
-  >
-    <span>
-      wallet
-    </span>
-    <button
-      class="sc-bwzfXH sc-htpNat chgZfo"
-    >
-      ✕
-    </button>
+<span
+  class="sc-bdVaJa eeVrHu"
+>
+  <span>
+    wallet
   </span>
-</div>
+  <button
+    class="sc-bwzfXH sc-htpNat chgZfo"
+  >
+    ✕
+  </button>
+</span>
 `;

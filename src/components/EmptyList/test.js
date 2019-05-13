@@ -6,6 +6,6 @@ describe('EmptyList', () => {
   it('Should render correctly', () => {
     const { container, queryByText } = render(<EmptyList />)
     expect(queryByText(/We don't have any favorite/g)).toBeTruthy()
-    expect(container).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

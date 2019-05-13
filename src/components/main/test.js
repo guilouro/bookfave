@@ -10,9 +10,9 @@ const store = mockStore({
   }
 })
 
-describe('Tag', () => {
+describe('<Main />', () => {
   it('Should render correctly', () => {
     const { container } = renderWithRedux(<Main />, store)
-    expect(container).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

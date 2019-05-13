@@ -1,8 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EmptyList Should render correctly 1`] = `
+exports[`<FavoriteList /> with data Should render correctly 1`] = `
 <div
-  class="sc-bdVaJa TPghH"
+  class="sc-bdVaJa djegqS"
+>
+  <div
+    class="sc-bwzfXH uTxCW"
+  >
+    <h2
+      class="sc-bxivhb hBvQiR"
+    >
+      Lorem Ipsum
+    </h2>
+    <a
+      class="sc-ifAKCX dVgucK"
+      href="//www.loremipsum.com"
+      target="_blank"
+    >
+      www.loremipsum.com
+    </a>
+    <div
+      class="sc-htpNat KtFsv"
+    >
+      <span
+        class="sc-gzVnrw bWPtIe"
+      >
+        <span>
+          wallet
+        </span>
+        <button
+          class="sc-htoDjs sc-dnqmqq haMeb"
+        >
+          ✕
+        </button>
+      </span>
+    </div>
+  </div>
+  <button
+    class="sc-EHOje sc-bZQynM bzKIkI"
+  >
+    <svg
+      height="16px"
+      viewBox="0 0 16 18"
+      width="16px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 15c0 .551-.448 1-1 1H5c-.552 0-1-.449-1-1V6h8v9zM8 2c1.103 0 2 .897 2 2H6c0-1.103.897-2 2-2zm7 2h-3c0-2.206-1.794-4-4-4S4 1.794 4 4H1a1 1 0 1 0 0 2h1v9c0 1.654 1.346 3 3 3h6c1.654 0 3-1.346 3-3V6h1a1 1 0 1 0 0-2z"
+        fill="currentColor"
+      />
+    </svg>
+    <span>
+      Delete
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<FavoriteList /> without data Should render correctly 1`] = `
+<div
+  class="sc-iwsKbI dScMtL"
 >
   <svg
     fill="currentColor"

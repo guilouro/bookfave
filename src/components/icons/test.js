@@ -7,7 +7,7 @@ describe('<Icon />', () => {
   Object.keys(AllIcons).forEach(CurrentIcon => {
     it(`Should render <${CurrentIcon} /> correctly`, () => {
       const { container } = render(<Icon name={CurrentIcon} />)
-      expect(container).toMatchSnapshot()
+      expect(container.firstChild).toMatchSnapshot()
     })
   })
 })
