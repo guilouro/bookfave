@@ -33,7 +33,10 @@ const data = [
 
 const Main = () => (
   <S.Main>
-    <header>BOOKFAVE - Challenge</header>
+    <S.Header>
+      BOOKFAVE
+      <S.Description>- Challenge</S.Description>
+    </S.Header>
     <S.Box>
       <FormHandler />
       <S.Content>

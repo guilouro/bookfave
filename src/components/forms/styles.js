@@ -2,10 +2,18 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+  }
 `
 
 export const Menu = styled.div`
   width: 70px;
+  height: 35px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -31,19 +39,31 @@ export const Button = styled(CleanButton)`
 
 export const Fields = styled.div`
   width: 100%;
+  height: 160px;
   display: flex;
+  flex-direction: column;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    height: initial;
+  }
 `
 
 export const Input = styled.input`
-  flex: 1;
   border: 1px solid #e7e8eb;
   border-radius: 4px;
   padding: 8px 10px;
-  &:not(:last-child) {
-    margin-right: 15px;
-  }
+  margin-bottom: 10px;
 
   ::placeholder {
     color: #b0b9bf;
+  }
+
+  @media (min-width: 600px) {
+    flex: 1;
+    margin: 0;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
   }
 `

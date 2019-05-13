@@ -5,16 +5,27 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  #main {
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: 900px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   body, html {
     height: 100%;
   }
   body {
     font-family: -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #F2F3F5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    @media (min-width: 900px) {
+      background-color: #F2F3F5;
+    }
   }
 
   form {
