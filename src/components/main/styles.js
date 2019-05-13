@@ -20,6 +20,7 @@ export const Header = styled.header`
 
 export const Description = styled.span`
   color: ${colors.secondary};
+  padding: 10px;
 `
 
 export const Box = styled.section`

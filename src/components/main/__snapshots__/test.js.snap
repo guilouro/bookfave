@@ -12,6 +12,7 @@ exports[`<Main /> Should render correctly 1`] = `
 
 .c2 {
   color: #b0b9bf;
+  padding: 10px;
 }
 
 .c3 {
@@ -222,11 +223,14 @@ exports[`<Main /> Should render correctly 1`] = `
   <header
     class="c1"
   >
-    BOOKFAVE
+    <img
+      alt="BOOKFAVE"
+      src="test-file-stub"
+    />
     <span
       class="c2"
     >
-      - Challenge
+      Challenge
     </span>
   </header>
   <section

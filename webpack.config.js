@@ -1,5 +1,5 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -9,11 +9,17 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    rules: [{
-      loader: 'babel-loader',
-      test: /\.js$/,
-      exclude: /node_modules/
-    }]
+    rules: [
+      {
+        loader: 'babel-loader',
+        test: /\.js$/,
+        exclude: /node_modules/
+      },
+      {
+        loader: 'file-loader',
+        test: /\.(jpg|jpeg|png|gif)/
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -24,4 +30,4 @@ module.exports = {
     port: 3000,
     open: true
   }
-};
+}
