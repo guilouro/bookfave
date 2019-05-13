@@ -8,4 +8,5 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   color: #b0b9bf; /* TODO: Define global color */
+  padding-top: 50px;
 `

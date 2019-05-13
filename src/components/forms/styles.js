@@ -47,6 +47,23 @@ export const Fields = styled.div`
     flex-direction: row;
     height: initial;
   }
+
+  button {
+    background-color: #1e68c1;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+
+    &:disabled {
+      background-color: #b0b9bf;
+    }
+
+    @media (min-width: 900px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
 `
 
 export const Input = styled.input`
